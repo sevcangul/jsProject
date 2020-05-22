@@ -4,13 +4,6 @@ const Food = require('./food')
 const Chalk = require('chalk')
 const Database = require('./database')
 
-const gulCafe = new Restaurant('Gul Cafe', 1993)
-const papatyaCafe = new Restaurant('Papatya Cafe', 2000)
-
-//console.log(gulCafe.brand)
-//console.log(gulCafe.foundationYear)
-//gulCafe.advertisement(papatyaCafe)
-
 const sevcan = new Customer ('Sevcan')
 const dilek = new Customer ('Dilek')
 
