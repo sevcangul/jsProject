@@ -4,24 +4,34 @@ const Food = require('./food')
 const Chalk = require('chalk')
 const Database = require('./database')
 
-const sevcan = new Customer ('Sevcan')
-const dilek = new Customer ('Dilek')
+// const sevcan = new Customer ('Sevcan')
+// const dilek = new Customer ('Dilek')
 
-const orderedFood = new Food ('Hamburger')
+// const orderedFood = new Food ('Hamburger')
 
 
-sevcan.order(orderedFood)
-dilek.order(orderedFood)
+// sevcan.order(orderedFood)
+// dilek.order(orderedFood)
 
-orderedFood.printCustomerName()
-console.log(Chalk.blue('hello world'))
-console.log(sevcan)
-console.log(dilek)
+// orderedFood.printCustomerName()
+// console.log(Chalk.blue('hello world'))
+// console.log(sevcan)
+// console.log(dilek)
 
-Database.save('food.json',orderedFood)
-Database.save('customer.json',sevcan)
+// Database.save('food.json',orderedFood)
+// Database.save('customer.json',sevcan)
+
 
 const loadedFile = Database.load('food.json')
-console.log(loadedFile.customers[0].name)
+
+console.log(loadedFile.name)
+
+const orderedFood = Food.create(loadedFile)
+const yagiz = new Customer('Yağız')
+
+yagiz.order(orderedFood)
+orderedFood.printCustomerName()
+
+console.log(orderedFood.customers[0])
 
 
